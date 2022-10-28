@@ -17,8 +17,7 @@ elif copies <= 4999:
     per_copy = 0.12
 else:
     per_copy =  0.38
-    total_cost = 0.18 * copies
-
+    total_cost = per_copy * 0.30
 
 # Print the total cost
 if copies <=0:
@@ -27,5 +26,5 @@ if copies <=0:
 
 else:
     print("")
-    print(f"Your order costs ${total_cost:,.2f}.")
+    print(f"Your order costs ${Your order costs:,.2f}.")
 
