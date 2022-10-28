@@ -1,0 +1,9 @@
+# Ignore hidden files
+.*
+!.gitignore
+
+# Ignore replit files
+poetry.lock
+pyproject.toml
+replit.nix
+venv/*
