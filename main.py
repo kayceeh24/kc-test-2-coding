@@ -8,15 +8,15 @@ has_card = input("Do you have loyalty card? [Y/N] ")
 
 # Calculate the total cost
 if copies <= 49:
-     total_costs = 0.38 * copies
+     total_costs = 0.18 * copies
 elif copies <= 199:
-     per_copy = 0.15
+     per_copy = 0.16
 elif copies <= 999:
      per_copy = 0.14
 elif copies >= 5000:
      per_copy = 0.12
 elif copies >= 5000:
-     total_cost = 0.15 * copies
+     total_costs = 0.10 * copies
 # Print the total cost
 if copies <=0:
     print()
