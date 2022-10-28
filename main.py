@@ -4,25 +4,28 @@ copies = int(copies)
 
 # Ask the user if they have a loyalty card and
 # make the response all uppercase
-has_card = input("Do you have loyalty card? [Y/N] ")
+has_card = input("Do you have loyalty card? [Y/N] ").upper()
 
 # Calculate the total cost
 if copies <= 49:
-     total_costs = 0.18 * copies
+     total_cost = 0.18 * copies
 elif copies <= 199:
-     per_copy = 0.16
+     total_cost = 0.16 * copies
 elif copies <= 999:
-     per_copy = 0.14
+     total_cost = 0.14 * copies
+elif copies >= 4999:
+     total_cost = 0.12 * copies
 elif copies >= 5000:
-     per_copy = 0.12
-elif copies >= 5000:
-     total_costs = 0.10 * copies
-# Print the total cost
-if copies <=0:
-    print()
-    print("The number of copies must be positive! ")
+     total_cost = 0.10 * copies
 
-else:
-    print("")
-    print(f"Your order costs ${total_costs:.2f}.")
+#Print the total cost
+discount = total_cost * 0.10
+if copies >= 100 and has_card  == 'Y':
+    total_cost = total_cost - discount
 
+#Print the output 
+print("")
+if copies > 0:
+    print(f"Your order costs ${total_cost:,.2f}.")
+elif copies < 0:
+    print("The number of copies must be positive!")
