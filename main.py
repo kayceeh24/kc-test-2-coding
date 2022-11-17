@@ -21,11 +21,13 @@ elif copies >= 5000:
 #Print the total cost
 discount = total_cost * 0.10
 if copies >= 100 and has_card  == 'Y':
-    total_cost = total_cost - discount
+    discounted_cost = total_cost - discount
 
 #Print the output 
 print("")
-if copies > 0:
+if copies > 0 and has_card == 'N' or copies < 100 and has_card == 'Y':
     print(f"Your order costs ${total_cost:,.2f}.")
+elif copies > 100 and has_card == 'Y':
+    print(f"Your order costs ${discounted_cost:,.2f}.")
 elif copies < 0:
     print("The number of copies must be positive!")
